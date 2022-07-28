@@ -1,5 +1,5 @@
 import { json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 
 import type { IMovieDetails } from "~/types";
 import { fetchTmdb, tmdbApi } from "~/utils";
@@ -27,7 +27,7 @@ export default function Movies() {
         {movies.map(({ id, overview, title }: IMovieDetails) => (
           <li key={id}>
             <h2>
-              <a href={`/movie/${id}`}>{title}</a>
+              <Link to={`/movie/${id}`}>{title}</Link>
             </h2>
             <div>{overview}</div>
           </li>

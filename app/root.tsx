@@ -6,6 +6,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useMatches,
 } from "@remix-run/react";
 
 export const meta: MetaFunction = () => ({
@@ -15,6 +16,8 @@ export const meta: MetaFunction = () => ({
 });
 
 export default function App() {
+  const matches = useMatches();
+  const includeScripts = !matches.some((match) => match.handle?.noHydration);
   return (
     <html lang="en">
       <head>
@@ -24,7 +27,7 @@ export default function App() {
       <body>
         <Outlet />
         <ScrollRestoration />
-        <Scripts />
+        {includeScripts ? <Scripts /> : null}
         <LiveReload />
       </body>
     </html>

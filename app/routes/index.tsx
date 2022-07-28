@@ -1,10 +1,18 @@
+import { Link } from "@remix-run/react";
+
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <h1>Welcome to Remix</h1>
       <ul>
         <li>
-          <a href="/movies">movies</a>
+          <Link to="/movies">movies</Link>
+        </li>
+        <li>
+          <a href="/nohydration">nohydration (anchor)</a>
+        </li>
+        <li>
+          <Link to="/nohydration">nohydration (Link)</Link>
         </li>
         <li>
           <a
