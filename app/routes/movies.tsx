@@ -26,7 +26,9 @@ export default function Movies() {
       <ul>
         {movies.map(({ id, overview, title }: IMovieDetails) => (
           <li key={id}>
-            <h2>{title}</h2>
+            <h2>
+              <a href={`/movie/${id}`}>{title}</a>
+            </h2>
             <div>{overview}</div>
           </li>
         ))}
