@@ -6,6 +6,12 @@ export default function Index() {
       <h1>Welcome to Remix</h1>
       <ul>
         <li>
+          <Link to="/collapse">collapse</Link>
+        </li>
+        <li>
+          <a href="/collapse-nohydration">collapse with nohydration</a>
+        </li>
+        <li>
           <Link to="/movies">movies</Link>
         </li>
         <li>
@@ -13,6 +19,9 @@ export default function Index() {
         </li>
         <li>
           <Link to="/nohydration">nohydration (Link)</Link>
+        </li>
+        <li>
+          <hr />
         </li>
         <li>
           <a
