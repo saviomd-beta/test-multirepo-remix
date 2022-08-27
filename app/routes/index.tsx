@@ -12,6 +12,9 @@ export default function Index() {
           <a href="/collapse-nohydration">collapse with nohydration</a>
         </li>
         <li>
+          <Link to="/movie-search">movie search</Link>
+        </li>
+        <li>
           <Link to="/movies">movies</Link>
         </li>
         <li>
